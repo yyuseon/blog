@@ -14,16 +14,16 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy # the main title
-
-tagline: A text-focused Jekyll theme # it will display as the subtitle
+title: "Data Lab"
+tagline: "데이터 분석과 성장 기록"
+url: "https://yyuseon.github.io"
+baseurl: "/data"    # 중요!! 반드시 /data 로 설정
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
 
 github:
   username: github_username # change to your GitHub username
@@ -149,8 +149,6 @@ pwa:
 
 paginate: 10
 
-# The base URL of your site
-baseurl: ""
 
 # ------------ The following options are not recommended to be modified ------------------
 
