@@ -1,9 +1,82 @@
 .memo-box {
     background-color: #fff9c4; /* 연노랑 */
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
     margin: 20px 0;
-    border-left: 5px solid #fbc02d;
+    border-left: 4px solid #fbc12db1;
+    font-size: 0.95rem;  
+  }
+
+  .memo-box h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.2rem;  /* 글씨 크기 조절 가능 */
+    color: #000000;     /* 초록색 글씨 */
+  }
+  
+  .green-tip {
+    background-color: #e6f4ea;  /* 연한 초록 */
+    border-left: 4px solid #34a853;  /* 초록 라인 */
+    padding: 15px 15px 15px 15px;  /* 왼쪽 패딩 늘림 (아이콘 자리 확보) */
+    margin: 20px 0;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    position: relative;
+    color: #555;
+  }
+  
+  .green-tip h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.2rem;  /* 글씨 크기 조절 가능 */
+  color: #1a5e20;     /* 초록색 글씨 */
+}
+
+  
+/* 글자 색 클래스 */
+.text-green {
+    color: #1a5e20;
+  }
+  
+  .text-gray {
+    color: #555;
+  }
+  
+  .text-blue {
+    color: #1a73e8;
+  }
+  
+  .text-red {
+    color: #d93025;
+  }
+  
+  /* 글자 + 배경 강조 */
+  .highlight-green {
+    color: white;
+    background-color: #34a853;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  .highlight-yellow {
+    color: #202124;
+    background-color: #ffed4e;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  .highlight-blue {
+    color: white;
+    background-color: #1a73e8;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  .highlight-gray {
+    color: white;
+    background-color: #c7c7c7;
+    padding: 4px 8px;
+    border-radius: 4px;
   }
   
