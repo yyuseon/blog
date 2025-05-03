@@ -174,16 +174,17 @@
 
 .intro-section {
   display: flex;
-  justify-content: space-between;
   align-items: stretch;
-  gap: 1.5rem;
+  justify-content: center; /* ★ 항상 가운데 정렬 */
+  gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
 
 .column {
-  flex: 1;
-  min-width: 220px;
+  flex: 1 1 200px;    /* 최소 200px로 줄어들 수 있도록 */
+  max-width: 350px;   /* 최대 폭 */
+  min-width: 200px;   /* 이 이하로는 안 줄어듦 */
   padding: 0.5rem;
   text-align: center;
   display: flex;
@@ -218,28 +219,23 @@
 
 .category-buttons {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2열 */
-  grid-gap: 0.4rem;
+  grid-template-columns: repeat(2, min-content);
+  row-gap: 0.4rem;
+  column-gap: 0.4rem;
   justify-items: center;
   align-items: center;
-  margin: auto 0; /* 세로 가운데 */
-  padding: 0 20px;
+  margin: auto auto; /* 세로 가운데 */
   font-family: 'Jua', sans-serif;
-
-    /* 화면 폭이 600px 이하일 때 padding 늘리기 */
-    @media screen and (max-width: 768px) {
-      padding: 0 40px;  /* 모바일 등 좁은 화면에서 padding 늘리기 */
-    }
 }
 
 .category-buttons .btn {
   background-color: #ffcce0;
-  border-radius: 50px; /* 완전 둥글게 */
+  border-radius: 30px; /* 완전 둥글게 */
   padding: 0.6rem 1.2rem;
   font-weight: 600;
   color: #5a3d3d;
   width: 90px;
-  height: 90px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -253,6 +249,7 @@
 /* ---------- 진행도 ---------- */
 .progress-text {
   font-size: 0.95rem;
+  font-family: 'Jua', sans-serif;
   margin-bottom: 0.4rem;
 }
 
@@ -266,6 +263,7 @@
   border: none;
   border-radius: 15px;
   width: 80%;
+  max-width: 180px;
   height: 18px;
   position: relative;
   overflow: hidden;
