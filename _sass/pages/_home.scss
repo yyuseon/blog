@@ -171,3 +171,115 @@
     }
   }
 }
+
+.intro-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.column {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 자기소개 텍스트 */
+.column h2 {
+  font-family: 'Jua', sans-serif;
+  font-size: 1.2rem;
+  color: #e57399;
+}
+
+.column p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.about-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #e57399;
+  text-decoration: none;
+}
+.about-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- 버튼 ---------- */
+
+.category-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2열 */
+  grid-gap: 0.4rem;
+  justify-items: center;
+  align-items: center;
+  margin: auto 0; /* 세로 가운데 */
+  padding: 0 20px;
+  font-family: 'Jua', sans-serif;
+}
+
+.category-buttons .btn {
+  background-color: #ffcce0;
+  border-radius: 50px; /* 완전 둥글게 */
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  color: #5a3d3d;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.category-buttons .btn:hover {
+  background-color: #ffb3cc;
+}
+
+/* ---------- 진행도 ---------- */
+.progress-text {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+/* 세로 가운데 */
+.column.progress-column {
+  justify-content: center;
+}
+
+.progress-bar-outline {
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 15px;
+  width: 80%;
+  height: 18px;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+}
+
+.progress-bar-fill {
+  background: linear-gradient(90deg, #ff99bb, #ffaacc);
+  height: 100%;
+  width: 30%;  /* 진행도 % */
+  border-radius: 15px;
+  transition: width 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+}

@@ -474,3 +474,18 @@ mjx-container {
     margin-top: 3rem;
   }
 }
+.petal {
+  position: fixed;
+  top: -10px;
+  color: #ffb6c1; /* 연핑크 */
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}

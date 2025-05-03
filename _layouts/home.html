@@ -8,6 +8,39 @@ refactor: true
 {% assign all_pinned = site.posts | where: 'pin', 'true' %}
 {% assign all_normal = site.posts | where_exp: 'item', 'item.pin != true and item.hidden != true' %}
 
+{% include lang.html %}
+
+<div class="intro-section">
+
+  <!-- Column 1 : 자기소개 -->
+  <div class="column">
+    <h2>데이터 분석 입문자</h2>
+    <p>공부 기록을 남기고 있어요!</p>
+    <a href="{{ '/about' | relative_url }}" class="about-link">About</a>
+  </div>
+
+  <!-- Column 2 : 카테고리 버튼 -->
+  <div class="column category-column">
+    <div class="category-buttons">
+      <a href="/categories/adsp" class="btn">ADsP</a>
+      <a href="/categories/#Python" class="btn">Python</a>
+      <a href="/categories/#시각화" class="btn">시각화</a>
+      <a href="/categories/#SQL" class="btn">SQL</a>
+    </div>
+  </div>
+
+  <!-- Column 3 : 진행도 -->
+  <div class="column progress-column">
+    <p class="progress-text">📊 ADsP 준비 진행도</p>
+    <div class="progress-bar-outline">
+      <div class="progress-bar-fill">30%</div>
+    </div>
+  </div>
+
+
+</div>
+
+
 {% assign posts = '' | split: '' %}
 
 <!-- Get pinned posts on current page -->
@@ -120,3 +153,5 @@ refactor: true
 {% if paginator.total_pages > 1 %}
   {% include post-paginator.html %}
 {% endif %}
+
+<script src="{{ '/assets/js/petal.js' | relative_url }}"></script>

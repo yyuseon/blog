@@ -14,7 +14,7 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: "Data Lab" # the main title
+title: "🌷Data Lab" # the main title
 
 tagline: "비전공자의 데이터분석 공부" # it will display as the subtitle
 
@@ -26,9 +26,6 @@ url: ""
 
 github:
   username: github_username # change to your GitHub username
-
-twitter:
-  username: twitter_username # change to your Twitter username
 
 social:
   # Change to your full name.

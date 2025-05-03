@@ -264,3 +264,47 @@ main {
     } /* tbody */
   } /* table */
 }
+
+h1 {
+  font-family: 'Jua', sans-serif;
+}
+
+// 소제목 전용 폰트 설정
+h2, h3 {
+  font-family: 'Jua', sans-serif !important;
+  color: #333333;
+}
+
+h2:hover, h3:hover {
+  color: #444444;
+  text-shadow: 2px 2px 4px rgba(100, 100, 100, 0.4);
+  transition: all 0.3s ease;
+}
+
+.prompt.pinkbox {
+  background-color: #ffeef5;  // 더 연한 핑크
+  border-left: 4px solid #f5aac7;  // 부드러운 핑크 테두리
+  padding: 1rem;
+  border-radius: 8px;
+  color: #555555;  // 부드러운 회색 텍스트
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.petal {
+  position: fixed;
+  top: -5vh;
+  opacity: 0.8;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: 1; /* 반복 안 함 */
+  pointer-events: none;
+}
+
+@keyframes fall {
+  to {
+      transform: translateY(110vh); /* 아래로 떨어짐 */
+      opacity: 0; /* 자연스럽게 사라짐 */
+  }
+}
+
