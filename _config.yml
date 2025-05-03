@@ -239,3 +239,9 @@ comments:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      sitemap: "https://yyuseon.github.io/blog/sitemap.xml"
