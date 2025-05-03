@@ -225,6 +225,11 @@
   margin: auto 0; /* 세로 가운데 */
   padding: 0 20px;
   font-family: 'Jua', sans-serif;
+
+    /* 화면 폭이 600px 이하일 때 padding 늘리기 */
+    @media screen and (max-width: 600px) {
+      padding: 40px;  /* 모바일 등 좁은 화면에서 padding 늘리기 */
+    }
 }
 
 .category-buttons .btn {
