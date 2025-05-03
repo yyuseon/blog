@@ -14,7 +14,7 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: "🌷Data Lab" # the main title
+title: "Data Lab" # the main title
 
 tagline: "비전공자의 데이터분석 공부" # it will display as the subtitle
 
@@ -221,3 +221,5 @@ jekyll-archives:
     tag: /tags/:name/
     category: /categories/:name/
 
+
+author: "*o^"
