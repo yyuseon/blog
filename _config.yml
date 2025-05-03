@@ -220,6 +220,10 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+  # ✅ 빈 카테고리/태그 페이지 제외 (글이 하나라도 연결된 것만 생성)
+  only:
+    - posts
+
 
 
 author: "*o^"
