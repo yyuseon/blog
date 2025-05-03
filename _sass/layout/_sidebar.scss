@@ -16,7 +16,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
   height: 100%;
   overflow-y: auto;
   width: v.$sidebar-width;
-  background: #fbd6e8;
+  background: linear-gradient(180deg, #f8d7da, #fff3cd);
   border-right: 1px solid var(--sidebar-border-color);
 
   /* Hide scrollbar for IE, Edge and Firefox */
@@ -54,6 +54,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
   }
 
   #avatar {
+    background-color: #ffffff !important;
     display: block;
     width: 6.5rem;
     height: 6.5rem;
