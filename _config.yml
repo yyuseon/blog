@@ -90,6 +90,7 @@ pageviews:
 #
 theme_mode: light
 
+
 # The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url
 # will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
@@ -193,6 +194,20 @@ defaults:
 
 sass:
   style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+style:
+  light:
+    sidebar-bg: "#f9dada"
+
 
 compress_html:
   clippings: all
