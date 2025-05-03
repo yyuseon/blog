@@ -1,8 +1,50 @@
 ---
-# the default layout is 'page'
-icon: fas fa-info-circle
-order: 4
+title: About
+icon: fas fa-user
+order: 5
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+# 👋 안녕하세요!
+
+저는 **비전공자**로서 새로운 도전을 시작한 데이터 분석 초보자입니다.
+
+**학부 전공:** 전혀 데이터랑 상관없는 분야 
+**현재:** 데이터 분석, Python & R 공부 중!
+
+---
+
+## 🔎 왜 데이터 분석을 공부하나요?
+
+- 데이터를 통해 **문제를 해결**하는 과정이 너무 재미있어요.
+- 비전공자도 데이터로 가치를 만들 수 있다는 걸 보여주고 싶어요.
+- 언젠가는 **데이터 기반 의사결정**을 할 수 있는 사람이 되고 싶습니다.
+
+---
+
+## 📝 지금 배우는 것들
+
+- **Python & Pandas**
+- **데이터 시각화** (Matplotlib, Seaborn)
+- **SQL**
+- 앞으로 머신러닝도 도전할 예정이에요!
+
+---
+
+## 💡 이 블로그에서는...
+
+- 데이터 공부 기록
+- 나만의 작은 프로젝트 소개
+- 배우면서 알게 된 팁 & 삽질 기록
+
+같은 내용을 공유할 예정이에요. 같은 길을 걷는 분들과 함께 성장하고 싶어요!
+
+---
+
+## 📬 연락하기
+
+궁금한 점이나 같이 이야기 나누고 싶다면 언제든지 연락 주세요.  
+**Email:** eung5731@gmail.com
+
+---
+
+_같이 배우고, 같이 성장해요!_
