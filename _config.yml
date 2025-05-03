@@ -227,8 +227,8 @@ jekyll-archives:
     tag: /tags/:name/
     category: /categories/:name/
 
-custom_css: /data/assets/css/custom.css
+custom_css: /assets/css/custom.css
 
-favicon: /assets/img/favicons/favicon.ico
+favicon: /assets/img/favicon/favicon.ico
 
 
