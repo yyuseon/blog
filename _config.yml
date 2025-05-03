@@ -229,3 +229,6 @@ jekyll-archives:
 
 custom_css: /data/assets/css/custom.css
 
+favicon: /assets/img/favicons/favicon.ico
+
+
