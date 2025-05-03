@@ -223,3 +223,15 @@ jekyll-archives:
 
 
 author: "*o^"
+
+comments:
+  provider: giscus
+  giscus:
+    repo: yyuseon/blog   # 👉 GitHub 저장소 이름
+    repo_id: "R_kgDOOjbfSQ"   # ✔ Giscus에서 생성한 값
+    category: "General"   # ✔ Giscus에서 만든 카테고리 이름
+    category_id: "DIC_kwDOOjbfSc4CpvBR"   # ✔ Giscus에서 생성한 값
+    mapping: pathname
+    input_position: bottom
+    lang: ko
+
