@@ -137,7 +137,7 @@ plt.show()
 - <strong>산점도</strong> 점들이 추세선 주변에 촘촘하게 모여 있지 않고 넓게 퍼져 있음<br>
 - <strong>추세선</strong> 기울기가 거의 0, 의료비 증가율이 높아져도 기대수명 증가율이 특별히 높아지지 않음<br>
 - <strong>신뢰구간(파란 그림자 부분)</strong> 폭이 넓음 → 데이터 변동성이 크고, 예측이 불확실함<br><br>
-<span class="highlight-yellow"><strong>국가별로 의료비 증가율과 기대수명 증가율이 서로 상관성이 있는가?</strong></span> 거의 무관하다.
+<span class="highlight-yellow"><strong>국가별로 의료비 증가율과 기대수명 증가율이 상관성이 있는가?</strong></span> 거의 무관하다.
 
 ---
 
@@ -186,7 +186,7 @@ plt.show()
 - <strong>산점도</strong> 왼쪽에 몰려있는 의료비가 거의 늘지 않은 국가들은 기대수명은 그래도 꽤 늘어난 경우가 많고, 오른쪽 끝의 의료비가 많이 증가한 국가들은 기대수명 증가량이 생각보다 크지 않음<br>
 - <strong>추세선</strong> 음의 상관관계, 의료비 증가량이 클수록 오히려 기대수명 증가량은 줄어드는 경향성이 약하게 보임<br>
 - <strong>신뢰구간</strong> 폭이 넓음 → 데이터 변동성이 크고, 이 관계가 아주 강하진 않다는 뜻<br><br>
-<span class="highlight-yellow"><strong>국가별로 의료비 증가량과 기대수명 증가량이 서로 상관성이 있는가?</strong></span> 의료비 증가량과 기대수명 증가량은 약한 음의 상관관계를 보인다. 의료비를 더 많이 쓴 나라일수록 기대수명 증가폭은 작았을 가능성이 있다.
+<span class="highlight-yellow"><strong>국가별로 의료비 증가량과 기대수명 증가량이 상관성이 있는가?</strong></span> 의료비 증가량과 기대수명 증가량은 약한 음의 상관관계를 보인다. 의료비를 더 많이 쓴 나라일수록 기대수명 증가폭은 작았을 가능성이 있다.
 (특히 이미 기대수명이 높은 선진국은 더 늘리기 어려움, "한계효용 체감" 현상과 비슷한 패턴)
 
 ---
@@ -267,7 +267,7 @@ for cluster in range(3):
     print(f"\n===== Cluster {cluster} : OECD 국가 (총 {len(countries)}개) =====")
     print(countries)
 ```
-> ===== Cluster 0 : OECD 국가 (총 3개) =====<br>
+>===== Cluster 0 : OECD 국가 (총 3개) =====<br>
 >['Colombia', 'Mexico', 'Turkey']
 >
 >===== Cluster 1 : OECD 국가 (총 17개) =====<br>
@@ -318,7 +318,18 @@ plt.show()
 ```
 ![증가량 기준 OCED 필터링 군집화](assets/img/life_medexp_clustering_oecd.png)
 
-군집화한 산점도에서 한국의 위치를 보면 <span class="text-red"><strong>한국은 OECD 평균을 넘어서며, 고비용을 지출하면서도 기대수명 증가에서 효율적 성과를 달성했다. 미국과 대비했을 때 특히 건강 투자 대비 효과적인 국가로 분류</strong></span>될 수 있다.
+군집화한 산점도에서 한국의 위치를 보면 <span class="text-red"><strong>한국은 OECD 평균을 넘어서며, 의료비 증가량이 컸지만 기대수명 증가에서 비용대비 효율적 성과를 달성</strong></span>했다.<br>
+
+```python
+df_oecd_sorted = df_oecd.sort_values(by='HealthExp_New', ascending=False).reset_index(drop=True)
+
+korea_rank = df_oecd_sorted[df_oecd_sorted['Entity'] == 'South Korea'].index[0] + 1
+
+print(f"한국의 의료비 순위: {korea_rank}위 (총 {len(df_oecd_sorted)}개국 중)")
+```
+> 한국의 의료비 순위: 18위 (총 36개국 중)
+
+최신 연도의 의료비 지출 기준으로 한국은 OECD 36개국 중 18위에 해당한다. 의료비 증가량만 놓고 보면 한국은 상위 그룹에 속한다. 기대수명 증가량은 OECD 36개국 중 2위이다. 이러한 결과는 한국의 의료비 지출 증가가 단순한 비용 증가에 그치지 않고, 실제로 국민 건강 향상에도 긍정적인 영향을 주었음을 시사한다.
 
 ---
 
@@ -326,10 +337,10 @@ plt.show()
 
 - **전 세계 데이터** 의료비 증가와 기대수명 증가의 관계는 거의 없음
 - **OECD 국가**
-  - **Cluster 0** 의료비 증가 낮음, 기대수명 증가량은 국가별 편차가 큼
+  - **Cluster 0** 의료비 증가 낮음, 기대수명 증가는 국가별 편차가 큼
   - **Cluster 1** 의료비 증가 높음, 기대수명 증가 중간 (한국 포함)
   - **Cluster 2** 의료비 증가 중간, 기대수명 증가 중간
-- **대한민국** 비교적 높은 비용 대비 기대수명 증가 성과 준수
+- **대한민국** 비교적 높은 의료비 증가량 대비 기대수명 증가 성과 준수
 - **미국** 의료비 증가량 최고이나 성과 낮음
 
 ---
