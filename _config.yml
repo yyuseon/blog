@@ -248,3 +248,7 @@ comments:
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+
+seo:
+  type: Blog
+  name: "Data Lab"
