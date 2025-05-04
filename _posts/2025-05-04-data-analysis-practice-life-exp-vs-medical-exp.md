@@ -101,15 +101,6 @@ plt.title('의료비 증가율 vs 기대수명 증가율 (국가별)')
 
 plt.grid(True)
 
-# 국가명을 점 옆에 표시
-for i in range(df_compare.shape[0]):
-    plt.text(
-        df_compare['HealthExp_Growth_pct'].iloc[i], 
-        df_compare['LifeExp_Growth_pct'].iloc[i], 
-        df_compare['Entity'].iloc[i], 
-        fontsize=8
-    )
-
 # 한국과 미국만 강조
 korea = df_compare[df_compare['Entity'] == 'South Korea']
 usa = df_compare[df_compare['Entity'] == 'United States']
@@ -129,7 +120,7 @@ plt.scatter(
     label='USA'  
 )
 
-plt.legend() # 범례 표시
+plt.legend() 
 plt.show()
 ```
 ![증가율 산점도](assets/img/life_medexp_rate_scatter.png)
