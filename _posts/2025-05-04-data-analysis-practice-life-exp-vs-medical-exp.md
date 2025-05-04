@@ -258,15 +258,6 @@ for cluster in range(3):
     print(f"\n===== Cluster {cluster} : OECD 국가 (총 {len(countries)}개) =====")
     print(countries)
 ```
->===== Cluster 0 : OECD 국가 (총 3개) =====<br>
->['Colombia', 'Mexico', 'Turkey']
->
->===== Cluster 1 : OECD 국가 (총 17개) =====<br>
->['Australia', 'Austria', 'Belgium', 'Canada', 'Denmark', 'Finland', 'France', 'Germany', 'Ireland', 'Luxembourg', 'Netherlands', 'Norway', 'South Korea', 'Sweden', 'Switzerland', 'United Kingdom', 'United States']
->
->===== Cluster 2 : OECD 국가 (총 16개) =====<br>
->['Chile', 'Czechia', 'Estonia', 'Greece', 'Hungary', 'Iceland', 'Israel', 'Italy', 'Japan', 'Latvia', 'Lithuania', 'New Zealand', 'Poland', 'Portugal', 'Slovenia', 'Spain']
-
 각 군집에 들어가는 국가명 리스트를 출력하여 해당 국가들의 특징을 떠올려보았다.
 
 Cluster 0은 의료비 증가가 적고 기대수명 증가도 제한적인 국가들, Cluster 1은 높은 의료비 증가와 평균적인 기대수명 증가를 보인 선진국들, 그리고 Cluster 2는 중간 정도의 의료비 증가로 효율적인 기대수명 증가를 달성한 국가들로 나눌 수 있었다.
@@ -325,7 +316,7 @@ print(f"한국의 의료비 순위: {korea_rank}위 (총 {len(df_oecd_sorted)}�
 
 <div class="memo-box">
 <h4>💡 논리적 연결고리</h4><br>
-- OECD 국가 내 의료비 증가량과 기대수명 증가량 사이의 상관관계 분석<br>
+- OECD 내 의료비 증가량과 기대수명 증가량 사이의 상관관계 분석<br>
 - 상관관계 확인 후 인과관계 분석 필요<br>
 - Confounding factors 통제<br>
 - 의료비의 구체적인 항목들 확인<br>
