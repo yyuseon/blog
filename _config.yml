@@ -252,3 +252,6 @@ plugins:
 seo:
   type: Blog
   name: "Data Lab"
+
+google_analytics:
+  id: G-L2HP2NK4F7
